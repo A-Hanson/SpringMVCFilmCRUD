@@ -27,7 +27,11 @@
 	<input type="submit" value="Search">
 	</form>
 </div>
+<div>
 
+<a href="newFilm.html">Add a Film</a>
+
+</div>
 
 </body>
 </html>

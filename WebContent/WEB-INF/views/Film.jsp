@@ -42,7 +42,14 @@
 <td>${film.rating}</td>
 <td>${film.specialFeatures}</td>
 <td>${film.category}</td>
-<%-- <td>${film.actors}</td> --%>
+	<td> 
+		<ol>
+			<c:forEach var ="actor" items="${film.actors }">
+				<li> ${actor.firstName} ${actor.lastName}	</li>
+			</c:forEach>
+	
+		</ol>	
+	</td>
 <%-- <td>${film.inventory}</td> --%>
 </tr>
 </table>

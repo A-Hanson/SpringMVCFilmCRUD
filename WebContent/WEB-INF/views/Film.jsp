@@ -27,7 +27,7 @@
 <th>Rating</th>
 <th>Special Features</th>
 <th>Category</th>
-<!-- <th>Actors</th> -->
+<th>Actors</th>
 <!-- <th>Inventory</th> -->
 </tr>
 <tr>
@@ -53,15 +53,16 @@
 <%-- <td>${film.inventory}</td> --%>
 </tr>
 </table>
-<a href="goToUpdatePage.do">Update this film</a>
+<a href="goToUpdatePage.do?filmid=${film.id}">Update this film</a>
 <a href="home.do">Go Back</a>
+<a href="delete.do?filmid=${film.id}">Delete this film</a>
 </c:when>
 
 <c:otherwise>
 
-<h1>Film not found</h1>
+			<h1>Film not found</h1>
 
-<a href="home.do">Go Back</a>
+			<a href="home.do">Go Back</a>
 
 </c:otherwise>
 

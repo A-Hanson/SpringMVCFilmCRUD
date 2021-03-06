@@ -50,6 +50,7 @@ public class FilmController {
 		ModelAndView mv = new ModelAndView();
 		redir.addFlashAttribute("film", film);
 		mv.setViewName("redirect:filmCreated.do");
+		System.out.println("******************" + film.getId());
 		return mv;
 	}
 	
@@ -59,14 +60,17 @@ public class FilmController {
 		return "WEB-INF/views/Film.jsp";
 	}
 	
-	@RequestMapping(path="goToUpdatePage.do")
-	public String goToUpdate() {
-		return "WEB-INF/views/updateFilm.jsp";
+	@RequestMapping(path="goToUpdatePage.do", params = "filmid")
+	public ModelAndView goToUpdate(Integer filmid) {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("WEB-INF/views/updateFilm.jsp");
+		mv.addObject(filmDAO.findFilmById(filmid));
+		return mv;
 	}
 	
 	@RequestMapping(path="UpdateFilm.do", method= RequestMethod.POST)
 	public ModelAndView updateFilm(Film film, RedirectAttributes redir) {
-		filmDAO.createFilm(film);
+		filmDAO.updateFilm(film);
 		ModelAndView mv = new ModelAndView();
 		redir.addFlashAttribute("film", film);
 		mv.setViewName("redirect:filmUpdated.do");
@@ -77,4 +81,16 @@ public class FilmController {
 		return "WEB-INF/views/Film.jsp";
 	}
 	
+	@RequestMapping(path = "delete.do", params = "filmid")
+	public ModelAndView deleteFilm(Integer filmid ) {
+		System.out.println("*************" + filmid);
+		filmDAO.deleteFilm(filmid);
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("redirect:filmDeleted.do");
+		return mv;
+	}
+	@RequestMapping(path="filmDeleted.do", method= RequestMethod.GET)
+	public String deletedFilm() {
+		return "WEB-INF/views/Film.jsp";
+	}
 }

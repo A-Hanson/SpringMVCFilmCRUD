@@ -10,6 +10,7 @@
 <!--       <input type="text" name="abbreviation" value="PR"> -->
 <body>
     <form action="UpdateFilm.do" method="POST">
+      <input type="hidden" name="id" value="${film.id }">
       <label for="title">Title:</label>
       <input type="text" name="title" value="${film.title }">
       <br>

@@ -52,9 +52,16 @@ public class FilmController {
 		mv.setViewName("redirect:filmCreated.do");
 		return mv;
 	}
+	
+	
 	@RequestMapping(path="filmCreated.do", method= RequestMethod.GET)
 	public String newFilm(Model model) {
 		return "WEB-INF/views/Film.jsp";
+	}
+	
+	@RequestMapping(path="goToUpdatePage.do")
+	public String goToUpdate() {
+		return "WEB-INF/views/updateFilm.jsp";
 	}
 	
 	@RequestMapping(path="UpdateFilm.do", method= RequestMethod.POST)

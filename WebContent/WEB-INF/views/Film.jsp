@@ -8,7 +8,11 @@
 <title>Film</title>
 </head>
 <body>
-<p>
+
+<c:choose>
+
+<c:when test="${ not empty film }">
+
 <h4>Film Information</h4>
 <table border= "1">
 <tr>
@@ -42,6 +46,22 @@
 <%-- <td>${film.inventory}</td> --%>
 </tr>
 </table>
+<a href="home.do">Go Back</a>
+</c:when>
+
+<c:otherwise>
+
+<h1>Film not found</h1>
+
+<a href="home.do">Go Back</a>
+
+</c:otherwise>
+
+</c:choose>
+
+<p>
+
+</form>
 </p>
 
 </body>

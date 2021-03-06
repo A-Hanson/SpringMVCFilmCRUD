@@ -5,14 +5,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Presidents</title>
+<title>Film List</title>
 </head>
 <body>
-Presidents:
+Films Found:
 <ol>
-<c:forEach var="pres" items="${presidents}">
+<c:forEach var="film" items="${film}">
 <li> 
-<a href="presidentInfo?termNumber=${pres.termNumber}">${pres.firstName} ${pres.middleName} ${pres.lastName}</a>
+<a href="filmInfo?film_id=${film.id}">${film.title} ${film.description}</a>
 </li>
 </c:forEach>
 </ol>

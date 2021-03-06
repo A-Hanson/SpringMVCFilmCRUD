@@ -23,7 +23,8 @@
 <th>Rating</th>
 <th>Special Features</th>
 <th>Category</th>
-<th>Inventory</th>
+<!-- <th>Actors</th> -->
+<!-- <th>Inventory</th> -->
 </tr>
 <tr>
 <td>${film.title}</td>
@@ -31,12 +32,14 @@
 <td>${film.releaseYear}</td>
 <td>${film.language}</td>
 <td>${film.rentalDuration}</td>
+<td>${film.rentalRate}</td>
+<td>${film.length}</td>
 <td>${film.replacementCost}</td>
 <td>${film.rating}</td>
 <td>${film.specialFeatures}</td>
 <td>${film.category}</td>
-<td>${film.actors}</td>
-<td>${film.inventory}</td>
+<%-- <td>${film.actors}</td> --%>
+<%-- <td>${film.inventory}</td> --%>
 </tr>
 </table>
 </p>

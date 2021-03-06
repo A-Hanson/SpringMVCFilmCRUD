@@ -1,8 +1,12 @@
 package com.skilldistillery.film.controllers;
 
+import org.jboss.logging.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.skilldistillery.film.dao.FilmDAO;
 
@@ -18,5 +22,14 @@ public class FilmController {
 		// TODO - add list of all films to model
 		return "WEB-INF/views/index.jsp";
 
+	}
+	
+	@RequestMapping(path = "findFilmById.do",
+			method = RequestMethod.GET)
+	public ModelAndView getFilmbyId(Integer filmid) {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("WEB-INF/views/Film.jsp");
+		mv.addObject("film", filmDAO.findFilmById(filmid) );
+		return mv;
 	}
 }

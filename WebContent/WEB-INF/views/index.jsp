@@ -16,7 +16,7 @@
 <div>
 	<h3>Find a Film by it's Id</h3>
 	<form action="findFilmById.do" method="get">
-	<label for="findFilmById">Film Id:</label> <input type="text" name="findFilmById">
+	<label for="findFilmById">Film Id:</label> <input type="text" name="filmid">
 	<input type="submit" value="Search">
 	</form>
 </div>

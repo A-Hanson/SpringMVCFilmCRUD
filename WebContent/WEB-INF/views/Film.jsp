@@ -27,7 +27,7 @@
 </tr>
 <tr>
 <td>${film.title}</td>
-<td>${film.decription}</td>
+<td>${film.description}</td>
 <td>${film.releaseYear}</td>
 <td>${film.language}</td>
 <td>${film.rentalDuration}</td>

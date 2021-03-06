@@ -1,22 +1,45 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Film List</title>
+<title>Film</title>
 </head>
 <body>
-Films Found:
-<ol>
-<c:forEach var="film" items="${film}">
-<li> 
-<a href="filmInfo?film_id=${film.id}">${film.title} ${film.description}</a>
-</li>
-</c:forEach>
-</ol>
 <p>
+<h4>Film Information</h4>
+<table border= "1">
+<tr>
+<th>Title</th>
+<th>Description</th>
+<th>Release Year</th>
+<th>Language</th>
+<th>Rental Duration</th>
+<th>Rental Rate</th>
+<th>Length</th>
+<th>Replacement Cost</th>
+<th>Rating</th>
+<th>Special Features</th>
+<th>Category</th>
+<th>Inventory</th>
+</tr>
+<tr>
+<td>${film.title}</td>
+<td>${film.decription}</td>
+<td>${film.releaseYear}</td>
+<td>${film.language}</td>
+<td>${film.rentalDuration}</td>
+<td>${film.replacementCost}</td>
+<td>${film.rating}</td>
+<td>${film.specialFeatures}</td>
+<td>${film.category}</td>
+<td>${film.actors}</td>
+<td>${film.inventory}</td>
+</tr>
+</table>
 </p>
+
 </body>
 </html>

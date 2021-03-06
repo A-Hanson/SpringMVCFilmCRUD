@@ -15,15 +15,15 @@
 
 <div>
 	<h3>Find a Film by it's Id</h3>
-	<form action="" method="get">
-	<label for="filmById">Film Id:</label> <input type="text" name="filmById">
+	<form action="findFilmById.do" method="get">
+	<label for="findFilmById">Film Id:</label> <input type="text" name="findFilmById">
 	<input type="submit" value="Search">
 	</form>
 </div>
 <div>
 	<h3>Search by Keyword</h3>
-	<form action="" method="get">
-	<label for="keyWord">Keyword:</label> <input type="text" name="keyWord">
+	<form action="findFilmByKeyword.do" method="get">
+	<label for="findFilmByKeyword">Keyword:</label> <input type="text" name="findFilmByKeyword">
 	<input type="submit" value="Search">
 	</form>
 </div>

@@ -12,7 +12,7 @@ Films Found:
 <ol>
 <c:forEach var="film" items="${film}">
 <li> 
-<a href="filmInfo?film_id=${film.id}">${film.title} ${film.description}</a>
+<a href="findFilmById.do?filmid=${film.id}">${film.title} ${film.description}</a>
 </li>
 </c:forEach>
 </ol>

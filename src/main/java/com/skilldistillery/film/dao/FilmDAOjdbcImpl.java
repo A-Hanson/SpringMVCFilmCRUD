@@ -155,6 +155,7 @@ public class FilmDAOjdbcImpl implements FilmDAO {
 	public Film createFilm(Film film) {
 		Connection conn = null;
 		try {
+			film.setLanguageId(1);
 			conn = DriverManager.getConnection(URL, USER, PWORD);
 			conn.setAutoCommit(false);
 
